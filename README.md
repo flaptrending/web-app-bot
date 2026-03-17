@@ -93,9 +93,9 @@ cp deploy/apache.htaccess /home/your-user/public_html/.htaccess
 ### Quick Deploy — Cloudflare Pages / Vercel / Netlify
 
 1. Fork this repository
-2. Connect it to Cloudflare Pages / Vercel / Netlify
-3. **Build command:** *(none — files are pre-built)*
-4. **Output directory:** `.` (root)
+1. Connect it to Cloudflare Pages / Vercel / Netlify
+2. **Build command:** *(none — files are pre-built)*
+3. **Output directory:** `.` (root)
 
 ---
 
@@ -121,36 +121,16 @@ The frontend connects to the following backend endpoints. These are **operated b
 
 This template includes the **DEX Swap UI** (PancakeSwap V3 + flap.sh bonding curve) and the **@flapbuybot** trading bot UI. Use of these components is permitted under the following rules:
 
-### Fee Receiver
-
-All swap transactions collect a **1% platform fee** sent to:
-
-```
-0x1EdbB31f17c2eEac9DbdD191990Da9BB35bF893A
-```
-
-| Rule | Requirement |
-|---|---|
-| 🔒 **Fee wallet** | Must remain `0x1EdbB31f17c2eEac9DbdD191990Da9BB35bF893A` |
-| 💸 **Fee amount** | Must remain 1% per swap |
-| 🚫 **No bypass** | You may not modify, remove, or redirect the fee |
-| 📝 **Attribution** | Must credit "Powered by Flap Trending" |
-| 🤖 **Bot fee** | @flapbuybot 1% fee rules apply identically |
-
-> These rules are embedded in the compiled JavaScript and enforced at the contract level.  
-> Any attempt to circumvent the fee receiver will break swap functionality.
-
 ---
 
 ## 📋 Terms of Use
 
 By cloning, forking, or deploying this repository you agree to:
 
-1. **Fee receiver is immutable.** The address `0x1EdbB31f17c2eEac9DbdD191990Da9BB35bF893A` must not be changed.
 2. **No reverse engineering.** You may not decompile or attempt to extract source code.
 3. **Attribution required.** Display "Powered by Flap Trending" visibly on your deployment.
 4. **No resale.** You may not sell, sublicense, or claim ownership of this UI.
-5. **BSC only.** This dashboard is designed for Binance Smart Chain only.
+4. **BSC only.** This dashboard is designed for Binance Smart Chain only.
 
 ---
 
@@ -170,7 +150,6 @@ By cloning, forking, or deploying this repository you agree to:
 
 - Private keys and wallet encryption secrets are **never included** in this repository
 - The compiled bundle contains only public-facing frontend logic
-- Fee wallet is embedded in the compiled JS — tampering will break swaps
 
 ---
 
